@@ -13,6 +13,12 @@ CHANNEL_WEBHOOKS = {
     850956125239246904: "webook url here" #endzone
 }
 
+def sanitize_message (content):
+
+content = content.replace("@everyone", "@\u200beveryone")  # Replace @everyone with a non-mentionable version
+    content = content.replace("@here", "@\u200bhere")  # Replace @here with a non-mentionable version
+    return content
+
 @client.event
 async def on_ready():
     print(f"Logged in as {client.user}.")
