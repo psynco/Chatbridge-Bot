@@ -10,7 +10,7 @@ CHANNEL_WEBHOOKS = {
     543896208175923200: "webhook url here", #cpe
     915274436347826227: "webhook url here", #mcpe
     585778970734231585: "webook url here", #2b2tbe
-    850956125239246904: "webook url here"    
+    850956125239246904: "webook url here" #endzone
 }
 
 @client.event
