@@ -6,7 +6,11 @@ client = discord.Client()
 
 CHANNEL_WEBHOOKS = {
     523687931483783168: "webhook url here",  # 2b2tpe
-    711600776451194910: "webhook url here"   # 2b2e
+    711600776451194910: "webhook url here",   # 2b2e
+    543896208175923200: "webhook url here", #cpe
+    915274436347826227: "webhook url here", #mcpe
+    585778970734231585: "webook url here", #2b2tbe
+    850956125239246904: "webook url here"    
 }
 
 @client.event
