@@ -14,9 +14,7 @@ CHANNEL_WEBHOOKS = {
 }
 
 def sanitize_message (content):
-
-content = content.replace("@everyone", "@\u200beveryone")  # Replace @everyone with a non-mentionable version
-    content = content.replace("@here", "@\u200bhere")  # Replace @here with a non-mentionable version
+    content = content.replace("@", "[at]")
     return content
 
 @client.event
@@ -30,6 +28,8 @@ async def on_message(message):
 
      if message.channel.id in CHANNEL_WEBHOOKS:
         webhook_url = CHANNEL_WEBHOOKS[message.channel.id] 
+
+         sanitized_content = sanitize_message(message.content)
 
         webhook_payload = {
             "username": str(message.author),
